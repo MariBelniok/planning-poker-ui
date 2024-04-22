@@ -1,0 +1,24 @@
+@use '../shared/styles/colors.scss' as *;
+
+form {
+  display: grid;
+  gap: 40px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: $gray600;
+
+  padding: 50px;
+  width: 500px;
+}
+
+h2 {
+  color: $gray200;
+  text-align: center;
+}
+
+fieldset {
+  display: grid;
+  gap: 12px;
+}
