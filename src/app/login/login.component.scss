@@ -10,11 +10,19 @@ form {
   background-color: $gray600;
 
   padding: 50px;
-  width: 500px;
+  width: 40vw;
+
+  @media screen and (max-width: 800px) {
+    width: 70vw;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 90vw;
+  }
 }
 
 h2 {
-  color: $gray200;
+  color: $orange;
   text-align: center;
 }
 
