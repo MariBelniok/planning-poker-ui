@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LobbyComponent } from './lobby/lobby.component';
+import { SharedComponentsModule } from './shared/components/components.module';
 
 const appRoutes: Routes = [
   {
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
+    SharedComponentsModule,
   ],
   providers: [WebSocketService],
   bootstrap: [AppComponent]
