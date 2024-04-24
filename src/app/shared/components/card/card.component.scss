@@ -1,0 +1,23 @@
+@use '../../styles/colors.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+div {
+  @include flex(row, center, center);
+
+  border: 2px solid $orange;
+  border-radius: 8px;
+
+  width: 60px;
+  height: 100px;
+
+  color: $gray200;
+  font-size: 20px;
+
+  cursor: pointer;
+  transition: all .2s;
+
+  &.selected, &:hover {
+    background-color: $orange;
+    color: $gray800;
+  }
+}

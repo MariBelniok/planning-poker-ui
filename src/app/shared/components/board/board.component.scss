@@ -1,11 +1,15 @@
 @use '../../styles/colors.scss' as *;
+@use '../../styles/mixins.scss' as *;
 
 div {
   background-color: $gray600;
 
   padding: 50px;
-  min-width: 40em;
+  width: 40em;
   min-height: 20em;
 
   border-radius: 12px;
+
+  @include flex(row, center, center, wrap);
+  gap: 24px;
 }
