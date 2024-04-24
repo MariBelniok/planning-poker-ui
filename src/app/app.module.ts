@@ -7,11 +7,16 @@ import { WebSocketService } from './shared/services/websocket.service';
 import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LobbyComponent } from './lobby/lobby.component';
 
 const appRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'lobby',
+    component: LobbyComponent,
   },
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: LoginComponent }
@@ -21,6 +26,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
+    LobbyComponent,
   ],
   imports: [
     AppRoutingModule,
