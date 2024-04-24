@@ -1,8 +1,12 @@
-<div>
-  <app-card
-    *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
-    [content]="item"
-    [selected]="(selectedCard$ | async) === item"
-    (click)="selectedCard$.next(item)"
-  ></app-card>
-</div>
+<main>
+  <h2>Escolha seu card</h2>
+
+  <div>
+    <app-card
+      *ngFor="let item of fibonacciSequence"
+      [content]="item"
+      [selected]="(selectedCard$ | async) === item"
+      (click)="selectedCard$.next(item)"
+    ></app-card>
+  </div>
+</main>

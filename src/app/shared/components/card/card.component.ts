@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class CardComponent {
   @Input()
-  content = 0;
+  content = '';
 
   @Input()
   public selected = false;
