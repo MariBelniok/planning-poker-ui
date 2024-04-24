@@ -1,9 +1,9 @@
 <main>
-  <h2>Escolha seu card</h2>
+  <h2>Faça sua escolha!</h2>
 
   <div>
     <app-card
-      *ngFor="let item of fibonacciSequence"
+      *ngFor="let item of items"
       [content]="item"
       [selected]="(selectedCard$ | async) === item"
       (click)="selectedCard$.next(item)"

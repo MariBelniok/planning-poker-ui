@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -8,7 +8,8 @@ import { BehaviorSubject } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BoardComponent {
-  public selectedCard$ = new BehaviorSubject(undefined);
+  @Input()
+  public items = [];
 
-  public fibonacciSequence = ['0', '1', '2', '3', '5', '8', '13', '21', '34', '55', '89', '?'];
+  public selectedCard$ = new BehaviorSubject(undefined);
 }
