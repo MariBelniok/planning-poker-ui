@@ -1,0 +1,40 @@
+@use '../../styles/colors.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+:host {
+  display: inline-block;
+  width: min-content;
+}
+
+div {
+  @include flex(row, center, center);
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+  border: 1px solid $gray400;
+
+  ng-icon {
+    color: $gray400;
+    font-size: 40px;
+  }
+
+  &.chose {
+    border: 1px solid $orange;
+    background-color: transparent;
+
+    ng-icon {
+      color: $orange;
+      font-size: 40px;
+    }
+  }
+}
+
+h4 {
+  margin-top: 12px;
+
+  color: $gray200;
+  font-weight: normal;
+  text-align: center;
+}

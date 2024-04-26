@@ -1,0 +1,9 @@
+<div [class.chose]="choseCard">
+  @if (choseCard) {
+    <ng-icon name="ionCheckmarkDoneOutline"></ng-icon>
+  } @else {
+    <ng-icon name="ionAlertOutline"></ng-icon>
+  }
+</div>
+
+<h4>{{ player |  titlecase }}</h4>

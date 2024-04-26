@@ -1,0 +1,7 @@
+@use '../shared/styles/mixins.scss' as *;
+
+section {
+  @include flex(row, center, center);
+  gap: 30px;
+  margin-bottom: 40px;
+}
