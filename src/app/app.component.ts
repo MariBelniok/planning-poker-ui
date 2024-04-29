@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { WebSocketService } from './shared/services/websocket.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',

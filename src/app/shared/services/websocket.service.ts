@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
 
 type SocketConfiguration = Partial<ManagerOptions & SocketOptions>;
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class WebSocketService {
   private socket: Socket;
 

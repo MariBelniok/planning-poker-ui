@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WebSocketService } from './shared/services/websocket.service';
-import { LoginComponent } from './login/login.component';
-import { RouterModule, Routes } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
 import { LobbyComponent } from './lobby/lobby.component';
+import { LoginComponent } from './login/login.component';
 import { SharedComponentsModule } from './shared/components/components.module';
 
 const appRoutes: Routes = [
@@ -36,7 +35,6 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     SharedComponentsModule,
   ],
-  providers: [WebSocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

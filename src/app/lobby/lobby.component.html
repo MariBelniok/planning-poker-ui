@@ -1,5 +1,13 @@
 <section>
-  <app-player *ngFor="let player of ['maria', 'joão']" [player]="player"></app-player>
+  <app-player
+    *ngFor="let player of (players$ | async)"
+    [player]="player?.name"
+    [choseCard]="player?.point"
+  ></app-player>
 </section>
 
 <app-board [items]="fibonacciSequence"></app-board>
+
+<button type="button">
+  Revelar
+</button>

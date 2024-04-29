@@ -63,4 +63,8 @@ button {
   &:hover {
     filter: brightness(90%);
   }
+
+  &:disabled {
+    background-color: $gray400;
+  }
 }
