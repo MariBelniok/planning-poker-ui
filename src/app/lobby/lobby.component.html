@@ -6,7 +6,10 @@
   ></app-player>
 </section>
 
-<app-board [items]="fibonacciSequence"></app-board>
+<app-board
+  [items]="fibonacciSequence"
+  (selectCard)="setPoint($event)"
+></app-board>
 
 <button type="button">
   Revelar

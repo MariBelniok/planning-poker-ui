@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, signal } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -11,5 +11,8 @@ export class BoardComponent {
   @Input()
   public items = [];
 
-  public selectedCard$ = new BehaviorSubject(undefined);
+  @Output()
+  public selectCard = new EventEmitter();
+
+  public selectedCard = signal(undefined);
 }

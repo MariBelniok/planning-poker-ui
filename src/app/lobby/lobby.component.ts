@@ -36,7 +36,7 @@ export class LobbyComponent implements OnInit {
     '?',
   ];
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     const meName = this.me.getMe()?.name;
     if (!meName) {
       this.router.navigate(['login']);
@@ -50,5 +50,9 @@ export class LobbyComponent implements OnInit {
         takeUntilDestroyed(this.destroyRef),
       )
       .subscribe();
+  }
+
+  public setPoint(point: string): void {
+    this.lobby.setPoint({ ...this.me.getMe(), point })
   }
 }

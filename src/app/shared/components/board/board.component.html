@@ -5,8 +5,8 @@
     <app-card
       *ngFor="let item of items"
       [content]="item"
-      [selected]="(selectedCard$ | async) === item"
-      (click)="selectedCard$.next(item)"
+      [selected]="selectedCard() === item"
+      (click)="selectCard.emit(item); selectedCard.set(item)"
     ></app-card>
   </div>
 </main>

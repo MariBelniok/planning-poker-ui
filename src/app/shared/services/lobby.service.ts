@@ -22,4 +22,8 @@ export class LobbyService {
   public getRoom(): Observable<any> {
     return this.ws.listen('getRoom');
   }
+
+  public setPoint(data: any): void {
+    this.ws.emit('setPoint', data);
+  }
 }
