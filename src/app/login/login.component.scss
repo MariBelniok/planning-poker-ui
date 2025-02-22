@@ -1,0 +1,32 @@
+@use '../shared/styles/colors.scss' as *;
+
+form {
+  display: grid;
+  gap: 40px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: $gray600;
+
+  padding: 50px;
+  width: 500px;
+
+  @media screen and (max-width: 800px) {
+    width: 70vw;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 90vw;
+  }
+}
+
+h2 {
+  color: $orange;
+  text-align: center;
+}
+
+fieldset {
+  display: grid;
+  gap: 12px;
+}

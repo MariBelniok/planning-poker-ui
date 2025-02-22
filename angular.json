@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "planning-poker-ui:build:production"
+              "buildTarget": "planning-poker-ui:build:production"
             },
             "development": {
-              "browserTarget": "planning-poker-ui:build:development"
+              "buildTarget": "planning-poker-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "planning-poker-ui:build"
+            "buildTarget": "planning-poker-ui:build"
           }
         },
         "test": {
@@ -100,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "da9426c9-dbe4-487f-bf23-f607be11225c"
   }
 }

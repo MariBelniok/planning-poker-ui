@@ -1,0 +1,23 @@
+@use '../../styles/colors.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+main {
+  background-color: $gray600;
+
+  padding: 30px 40px;
+  width: 40em;
+  min-height: 20em;
+
+  border-radius: 12px;
+}
+
+h2 {
+  color: $orange;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+div {
+  @include flex(row, center, center, wrap);
+  gap: 32px;
+}

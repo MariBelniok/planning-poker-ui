@@ -1,0 +1,12 @@
+<main>
+  <h2>Faça sua escolha!</h2>
+
+  <div>
+    <app-card
+      *ngFor="let item of items"
+      [content]="item"
+      [selected]="selectedCard() === item"
+      (click)="selectCard.emit(item); selectedCard.set(item)"
+    ></app-card>
+  </div>
+</main>
